@@ -6,6 +6,9 @@ import main.com.adventure.world.objects.Tangible;
 import main.com.adventure.world.objects.Weapon;
 import main.com.adventure.world.objects.keys.Key;
 
+//import java.util.Collection;
+//import java.util.Scanner;
+
 public class Player {
 
     public int level = 5;
@@ -15,24 +18,30 @@ public class Player {
     private int power = 1;
     private int health = 10;
 
+    private String name;
+
     /**
      * Sprint 1 Module 3
      * Saves the player's name. This file should store the name so it can be referenced later. After setting the name,
      * inform the user that the name has been changed by saying "Your name is now {name}".
+     *
      * @param newName - the player's name that will be saved
+     * @ return
      */
     public void setName(String newName) {
-
+        name = newName;
+        System.out.println("Your name is now " + name);
     }
 
     /**
      * Sprint 1 Module 3
      * Retrieves the name of this player. The name of the player should be stored in this file, so we should reference
      * that value here.
+     *
      * @return The name of the player
      */
     public String getName() {
-        return "";
+        return name;
     }
 
     /**
@@ -42,7 +51,7 @@ public class Player {
      * @return true if the player's level is enough to open the door.
      */
     public boolean canOpenDoor() {
-        return false;
+        return (float) level / 2 > 2;
     }
 
 
@@ -153,4 +162,5 @@ public class Player {
     public int getPower() {
         return power;
     }
+
 }

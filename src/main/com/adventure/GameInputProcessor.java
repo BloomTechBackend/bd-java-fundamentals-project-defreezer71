@@ -3,7 +3,9 @@ package main.com.adventure;
 import main.com.adventure.settings.Command;
 import main.com.adventure.settings.CommandConstants;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Locale;
+import java.util.Scanner;
 
 public class GameInputProcessor {
 
@@ -12,6 +14,8 @@ public class GameInputProcessor {
      * @return the response from the user.
      */
     public String prompt() {
+        Scanner keyboardInput = new Scanner(System.in, StandardCharsets.UTF_8);
+
         System.out.println("Enter your next command:");
         return "";
     }
