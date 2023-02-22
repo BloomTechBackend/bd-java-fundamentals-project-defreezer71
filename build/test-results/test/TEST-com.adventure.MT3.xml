@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adventure.MT3" tests="10" skipped="0" failures="0" errors="0" timestamp="2023-02-22T06:30:04" hostname="MacBook-Air.local" time="1.126">
+  <properties/>
+  <testcase name="testPlayerMovementInvalid()" classname="com.adventure.MT3" time="0.059"/>
+  <testcase name="testPlayerMovementEast()" classname="com.adventure.MT3" time="0.003"/>
+  <testcase name="testPlayerMovementWest()" classname="com.adventure.MT3" time="0.004"/>
+  <testcase name="testInvalidMoveInput()" classname="com.adventure.MT3" time="0.996"/>
+  <testcase name="testPrompt2()" classname="com.adventure.MT3" time="0.015"/>
+  <testcase name="checkMoveInputEast()" classname="com.adventure.MT3" time="0.004"/>
+  <testcase name="checkMoveInputWest()" classname="com.adventure.MT3" time="0.003"/>
+  <testcase name="testUseInput()" classname="com.adventure.MT3" time="0.017"/>
+  <testcase name="checkSimpleInput()" classname="com.adventure.MT3" time="0.002"/>
+  <testcase name="testPrompt()" classname="com.adventure.MT3" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

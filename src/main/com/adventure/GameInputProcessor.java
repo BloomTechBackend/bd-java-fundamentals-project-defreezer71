@@ -14,10 +14,13 @@ public class GameInputProcessor {
      * @return the response from the user.
      */
     public String prompt() {
-        Scanner keyboardInput = new Scanner(System.in, StandardCharsets.UTF_8);
+        Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 
-        System.out.println("Enter your next command:");
-        return "";
+        String userInput;
+
+        System.out.println("Enter your next command: ");
+        userInput = scanner.nextLine();
+        return userInput;
     }
 
     /**
@@ -33,7 +36,14 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and blank object
      */
     private Command buildSimpleCommand(String input) {
-        return new Command("");
+        input = input.trim();
+        int c = input.indexOf(" ");
+        if (c == -1) {
+            return new Command(input);
+        }
+        String firstWord = input.substring(0, c);
+        return new Command(firstWord);
+
     }
 
     /**
@@ -56,8 +66,21 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and object
      */
     private Command buildCommandWithObject(String input) {
-        return new Command("", "");
+        input = input.trim();
+        int c = input.indexOf(" ");
+        if (c == -1) {
+            return new Command(input);
+        }
+        String firstWord = input.substring(0, c);
+        String objectName = input.substring(c + 1);
+        return new Command(firstWord, objectName);
     }
+
+
+
+
+
+
 
 
     /** DO NOT CHANGE ANYTHING BELOW THIS LINE. **/

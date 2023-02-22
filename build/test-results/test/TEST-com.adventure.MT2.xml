@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.adventure.MT2" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-11T20:36:46" hostname="MacBook-Air.local" time="0.178">
-  <properties/>
-  <testcase name="canOpenDoor()" classname="com.adventure.MT2" time="0.17"/>
-  <testcase name="setName()" classname="com.adventure.MT2" time="0.005"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
