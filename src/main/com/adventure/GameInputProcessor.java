@@ -36,14 +36,8 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and blank object
      */
     private Command buildSimpleCommand(String input) {
-        input = input.trim();
-        int c = input.indexOf(" ");
-        if (c == -1) {
-            return new Command(input);
-        }
-        String firstWord = input.substring(0, c);
-        return new Command(firstWord);
-
+        String verb = input.split(" ") [0];
+        return new Command(verb, "");
     }
 
     /**
@@ -66,14 +60,14 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and object
      */
     private Command buildCommandWithObject(String input) {
-        input = input.trim();
-        int c = input.indexOf(" ");
-        if (c == -1) {
-            return new Command(input);
+        String[] splitInput = input.split(" ");
+        if (splitInput.length > 1) {
+            String verb = splitInput[0];
+            String object = splitInput[1];
+            return new Command(verb, object);
+        } else {
+            return new Command(splitInput[0] , "");
         }
-        String firstWord = input.substring(0, c);
-        String objectName = input.substring(c + 1);
-        return new Command(firstWord, objectName);
     }
 
 
